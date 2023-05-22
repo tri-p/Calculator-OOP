@@ -23,6 +23,8 @@ def ask_operation():
         add() # should lead to add function
     elif user_input.lower() == "s":
         sub() # should lead to sub function
+    elif user_input.lower() == "m":
+        mul() # should lead to mul function
 
 # def add
 def add():
@@ -52,6 +54,17 @@ def sub():
         "\nDifference: " + str(diff))
 
 # def multiply
+def mul():
+    # ask for inputs
+    try:
+        num1 = float(input("\nInput the first number: "))
+        num2 = float(input("Input the second number: "))
+    except ValueError:
+        print("Input a number only.")
+    # get the product of the two inputs
+    prod = num1 * num2
+    print(str(num1), "*", str(num2) + 
+        "\nProduct: " + str(prod))
 
 # def division
 
