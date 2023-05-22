@@ -7,11 +7,13 @@ class Calculator:
     def ask_operation(self):
         '''Create def ask_operation where it lets the user to pick among
         addition, subtraction, multiplication, and division.'''
-        user_input = input("\nWhat operation do you want to use?\n" +
-                            "a - Add\n" +
-                            "s - Subtract\n" +
-                            "m - Multiply\n" +
-                            "d - Divide\n\n")
+        print("\n" + "\033[93m=" * 80 + "\n")
+        user_input = input("\n\033[95m\x1B[3m\033[1mWhat operation do you want to use?\033[0m\n" +
+                            "\033[92ma \033[97m- Add\n" +
+                            "\033[92ms \033[97m- Subtract\n" +
+                            "\033[92mm \033[97m- Multiply\n" +
+                            "\033[92md \033[97m- Divide\n\n" +
+                            "\033[95m")
         if user_input.lower() == "a":
             Calculator.add(self) # should lead to add function
         elif user_input.lower() == "s":
@@ -21,22 +23,26 @@ class Calculator:
         elif user_input.lower() == "d":
             Calculator.div(self) # should lead to div function
         else:
-            print("Error. Invalid input.")
+            print("\n\033[91mError. Invalid input.\033[97m\n")
+            print("\033[93m=" * 80, "\n")
             exit()
+        print("\n" + "\033[93m=" * 80 + "\n")
         return
 
     # def add
     def add(self):
         # ask for inputs
         try:
-            num1 = float(input("\nInput the first number: "))
-            num2 = float(input("Input the second number: "))
+            num1 = float(input("\n\033[96m\033[1mInput the first number: \033[0m"))
+            num2 = float(input("\033[96m\033[1mInput the second number: \033[0m"))
         except ValueError:
-            print("Syntax Error: Invalid input")
+            print("\n\033[91mSyntax Error: Invalid input\033[97m\n")
+            print("\033[93m=" * 80, "\n")
+            exit()
         # get the sum of the two inputs
         sum = num1 + num2
-        print(str(num1), "+", str(num2) + 
-            "\nSum: " + str(sum))
+        print("\n\033[92m" + str(num1), "+", str(num2) + 
+            "\n\033[96m\033[1mSum: \033[0m" + str(sum))
         Calculator.retry(self)
         return
 
@@ -44,14 +50,16 @@ class Calculator:
     def sub(self):
         # ask for inputs
         try:
-            num1 = float(input("\nInput the first number: "))
-            num2 = float(input("Input the second number: "))
+            num1 = float(input("\n\033[96m\033[1mInput the first number: \033[0m"))
+            num2 = float(input("\033[96m\033[1mInput the second number: \033[0m"))
         except ValueError:
-            print("Syntax Error: Invalid input")
+            print("\n\033[91mSyntax Error: Invalid input\033[97m\n")
+            print("\033[93m=" * 80, "\n")
+            exit()
         # get the difference of the two inputs
         diff = num1 - num2
-        print(str(num1), "-", str(num2) + 
-            "\nDifference: " + str(diff))
+        print("\n\033[92m" + str(num1), "-", str(num2) + 
+            "\n\033[96m\033[1mDifference: \033[0m" + str(diff))
         Calculator.retry(self)
         return
 
@@ -59,14 +67,16 @@ class Calculator:
     def mul(self):
         # ask for inputs
         try:
-            num1 = float(input("\nInput the first number: "))
-            num2 = float(input("Input the second number: "))
+            num1 = float(input("\n\033[96m\033[1mInput the first number: \033[0m"))
+            num2 = float(input("\033[96m\033[1mInput the second number: \033[0m"))
         except ValueError:
-            print("Syntax Error: Invalid input")
+            print("\n\033[91mSyntax Error: Invalid input\033[97m\n")
+            print("\033[93m=" * 80, "\n")
+            exit()
         # get the product of the two inputs
         prod = num1 * num2
-        print(str(num1), "*", str(num2) + 
-            "\nProduct: " + str(prod))
+        print("\n\033[92m" + str(num1), "*", str(num2) + 
+            "\n\033[96m\033[1mProduct: \033[0m" + str(prod))
         Calculator.retry(self)
         return
 
@@ -74,16 +84,20 @@ class Calculator:
     def div(self):
         # ask for inputs
         try:
-            num1 = float(input("\nInput the first number: "))
-            num2 = float(input("Input the second number: "))
+            num1 = float(input("\n\033[96m\033[1mInput the first number: \033[0m"))
+            num2 = float(input("\033[96m\033[1mInput the second number: \033[0m"))
+            # get the quotient of the two inputs
+            quot = num1 / num2
         except ValueError:
-            print("Syntax Error: Invalid input")
+            print("\n\033[91mSyntax Error: Invalid input\033[97m\n")
+            print("\033[93m=" * 80, "\n")
+            exit()
         except ZeroDivisionError:
-            print("Math Error: Division by zero")
-        # get the quotient of the two inputs
-        quot = num1 / num2
-        print(str(num1), "/", str(num2) + 
-            "\nQuotient: " + str(quot))
+            print("\n\033[91mMath Error: Division by zero\033[97m\n")
+            print("\033[93m=" * 80, "\n")
+            exit()
+        print("\n\033[92m" + str(num1), "/", str(num2) + 
+            "\n\033[96m\033[1mQuotient: \033[0m" + str(quot))
         Calculator.retry(self)
         return
 
@@ -91,16 +105,19 @@ class Calculator:
     def retry(self):
         '''Create def retry where it asks the user if they would
         like to try again or not.''' 
-        user_input = input("\nWould you like to try again?\n" +
-                        "y - Yes\n" +
-                        "n - No\n\n")
+        user_input = input("\n\033[95m\x1B[3m\033[1mWould you like to try again?\033[0m\n" +
+                        "\033[92my \033[97m- Yes\n" +
+                        "\033[92mn \033[97m- No\n\n" +
+                        "\033[95m")
         if user_input.lower() == "y":
             Calculator.ask_operation(self)
         elif user_input.lower() == "n":
-            print("Thank you!")
+            print("\n\033[96m\x1B[3m\033[1mThank you!\033[0m")
+            print("\n" + "\033[93m=" * 80 + "\n")
             exit()
         else:
-            print("Error. Invalid input.")
+            print("\n\033[91mError. Invalid input.\033[97m\n")
+            print("\033[93m=" * 80 + "\n")
             exit()
         Calculator.retry(self)
         return
