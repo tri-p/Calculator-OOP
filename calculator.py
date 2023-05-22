@@ -25,6 +25,10 @@ def ask_operation():
         sub() # should lead to sub function
     elif user_input.lower() == "m":
         mul() # should lead to mul function
+    elif user_input.lower() == "d":
+        div() # should lead to div function
+    else:
+        print("Error. Invalid input.")
 
 # def add
 def add():
@@ -67,6 +71,19 @@ def mul():
         "\nProduct: " + str(prod))
 
 # def division
+def div():
+    # ask for inputs
+    try:
+        num1 = float(input("\nInput the first number: "))
+        num2 = float(input("Input the second number: "))
+    except ValueError:
+        print("Input a number only.")
+    except ZeroDivisionError:
+        print("Division by zero")
+    # get the quotient of the two inputs
+    quot = num1 / num2
+    print(str(num1), "/", str(num2) + 
+        "\nQuotient: " + str(quot))
 
 # def retry 
 
