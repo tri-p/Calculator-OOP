@@ -5,3 +5,4 @@ from calculator import Calculator
 
 # ==== start ====
 ask_operation()
+retry()
