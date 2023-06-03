@@ -15,6 +15,10 @@ while True:
         calc.add(num1, num2) # should lead to add function
     elif user_input == "s":
         calc.sub(num1, num2) # should lead to sub function
+    elif user_input == "m": 
+        calc.mul(num1, num2) # should lead to mul function
+    elif user_input == "d":
+        calc.div(num1, num2) # should lead to div function
 
     # ask to input two numbers
     num1 = ui.input_user()
@@ -31,6 +35,9 @@ while True:
     # if the user enters "m" - multiply
     prod = calc.mul(num1, num2)
     ui.print_prod(prod)
+
+    # if the user enters "d" - divide
+    quot = calc.div(num1, num2)
 
     # retry
     if not ui.retry():

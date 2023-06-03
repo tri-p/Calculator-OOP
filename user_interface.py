@@ -40,8 +40,12 @@ class UserInterface:
     
     # print prod
     def print_prod(self, prod):
-        print("\n\033[96m\033[1mDifference: \033[0m" + str(prod))
+        print("\n\033[96m\033[1mProduct: \033[0m" + str(prod))
         return
+    
+    # print quot
+    def print_quot(self, quot):
+        print("\n\033[96m\033[1mQuotient: \033[0m" + str(prod))
     
     # retry
     def retry(self):
