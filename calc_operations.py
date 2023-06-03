@@ -14,7 +14,7 @@ class CalculatorOperations(UserInterface, Calculator):
         sum = calc.add(num1, num2)
         ans = print("\n\033[92m" + str(num1) + " + " + str(num2)) 
         ui.print_sum(sum)
-        return 
+        return
 
     def sub_ans(self):
         num1 = ui.input_user()
@@ -30,4 +30,12 @@ class CalculatorOperations(UserInterface, Calculator):
         prod = calc.mul(num1, num2)
         ans = print("\n\033[92m" + str(num1) + " * " + str(num2)) 
         ui.print_prod(prod)
-        return 
+        return
+
+    def div_ans(self):
+        num1 = ui.input_user()
+        num2 = ui.input_user()
+        quot = calc.div(num1, num2)
+        ans = print("\n\033[92m" + str(num1), " / ", str(num2))
+        ui.print_quot(quot)
+        return
