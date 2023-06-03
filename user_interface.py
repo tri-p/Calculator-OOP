@@ -16,7 +16,7 @@ class UserInterface:
                             "\033[95m")
         user_input = user_input.lower()
         print("\n")
-        return
+        return user_input
 
     # ask for inputs
     def input_user(self):
@@ -46,6 +46,7 @@ class UserInterface:
     # print quot
     def print_quot(self, quot):
         print("\n\033[96m\033[1mQuotient: \033[0m" + str(prod))
+        return
     
     # retry
     def retry(self):

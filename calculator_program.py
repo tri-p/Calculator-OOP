@@ -19,6 +19,9 @@ while True:
         calc.mul(num1, num2) # should lead to mul function
     elif user_input == "d":
         calc.div(num1, num2) # should lead to div function
+    else:
+        print("\n\033[91mError. Invalid input.\033[97m\n")
+        exit()
 
     # ask to input two numbers
     num1 = ui.input_user()
@@ -38,6 +41,7 @@ while True:
 
     # if the user enters "d" - divide
     quot = calc.div(num1, num2)
+    ui.print_quot(quot)
 
     # retry
     if not ui.retry():
