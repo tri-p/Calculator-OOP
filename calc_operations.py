@@ -23,3 +23,11 @@ class CalculatorOperations(UserInterface, Calculator):
         ans = print("\n\033[92m" + str(num1) + " - " + str(num2))
         ui.print_diff(diff)
         return
+
+    def mul_ans(self):
+        num1 = ui.input_user()
+        num2 = ui.input_user()
+        prod = calc.mul(num1, num2)
+        ans = print("\n\033[92m" + str(num1) + " * " + str(num2)) 
+        ui.print_prod(prod)
+        return 
