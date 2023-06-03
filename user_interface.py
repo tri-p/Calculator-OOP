@@ -33,6 +33,11 @@ class UserInterface:
         print("\n\033[96m\033[1mSum: \033[0m" + str(sum))
         return
     
+    # print diff
+    def print_diff(self, diff):
+        print("\n\033[96m\033[1mDifference: \033[0m" + str(diff))
+        return
+    
     # retry
     def retry(self):
         inp_try = input("\n\033[95m\x1B[3m\033[1mWould you like to try again?\033[0m\n" +

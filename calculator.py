@@ -9,20 +9,9 @@ class Calculator:
         return sum
 
     # def subtract
-    def sub(self):
-        # ask for inputs
-        try:
-            num1 = float(input("\n\033[96m\033[1mInput the first number: \033[0m"))
-            num2 = float(input("\033[96m\033[1mInput the second number: \033[0m"))
-        except ValueError:
-            print("\n\033[91mSyntax Error: Invalid input\033[97m\n")
-            print("\033[93m=" * 80, "\n")
-            exit()
-        # get the difference of the two inputs
+    def sub(self, num1, num2):
         diff = num1 - num2
-        print("\n\033[92m" + str(num1), "-", str(num2) + 
-            "\n\033[96m\033[1mDifference: \033[0m" + str(diff))
-        return
+        return diff
 
     # def multiply
     def mul(self):
