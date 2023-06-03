@@ -11,10 +11,15 @@ calc = Calculator()
 # ask operation
 user_input = ui.ask_operation()
 if user_input == "a":
-    calc.add() # should lead to add function
+    calc.add(num1, num2) # should lead to add function
+
+# ask to input two numbers
+num1 = ui.input_user()
+num2 = ui.input_user()
 
 # if the user enters "a"
-calc.add()
+sum = calc.add(num1, num2)
+ui.print_sum(sum)
 
 # if the user enters "s"
 calc.sub()

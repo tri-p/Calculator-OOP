@@ -2,6 +2,7 @@
 
 # create class UserInterface
 class UserInterface:
+
     # def ask_operation
     def ask_operation(self):
         '''Create def ask_operation where it lets the user to pick among
@@ -14,4 +15,20 @@ class UserInterface:
                             "\033[92md \033[97m- Divide\n\n" +
                             "\033[95m")
         user_input = user_input.lower()
+        print("\n")
+        return
+
+    # ask for inputs
+    def input_user(self):
+        try:
+            number = input("\033[96m\033[1mInput a number: \033[0m")
+            number = float(number)
+            return number
+        except ValueError:
+            print("Input a number only.")
+            return self.input_user()
+
+    # print sum
+    def print_sum(self, sum):
+        print("\n\033[96m\033[1mSum: \033[0m" + str(sum))
         return

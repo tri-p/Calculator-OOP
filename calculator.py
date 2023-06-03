@@ -3,47 +3,9 @@
 # create class Calculator
 class Calculator:
 
-    # def ask_operation
-    def ask_operation(self):
-        '''Create def ask_operation where it lets the user to pick among
-        addition, subtraction, multiplication, and division.'''
-        print("\n" + "\033[93m=" * 80 + "\n")
-        user_input = input("\n\033[95m\x1B[3m\033[1mWhat operation do you want to use?\033[0m\n" +
-                            "\033[92ma \033[97m- Add\n" +
-                            "\033[92ms \033[97m- Subtract\n" +
-                            "\033[92mm \033[97m- Multiply\n" +
-                            "\033[92md \033[97m- Divide\n\n" +
-                            "\033[95m")
-        if user_input.lower() == "a":
-            Calculator.add(self) # should lead to add function
-        elif user_input.lower() == "s":
-            Calculator.sub(self) # should lead to sub function
-        elif user_input.lower() == "m":
-            Calculator.mul(self) # should lead to mul function
-        elif user_input.lower() == "d":
-            Calculator.div(self) # should lead to div function
-        else:
-            print("\n\033[91mError. Invalid input.\033[97m\n")
-            print("\033[93m=" * 80, "\n")
-            exit()
-        print("\n" + "\033[93m=" * 80 + "\n")
-        return
-
     # def add
-    def add(self):
-        # ask for inputs
-        try:
-            num1 = float(input("\n\033[96m\033[1mInput the first number: \033[0m"))
-            num2 = float(input("\033[96m\033[1mInput the second number: \033[0m"))
-        except ValueError:
-            print("\n\033[91mSyntax Error: Invalid input\033[97m\n")
-            print("\033[93m=" * 80, "\n")
-            exit()
-        # get the sum of the two inputs
+    def add(self, num1, num2):
         sum = num1 + num2
-        print("\n\033[92m" + str(num1), "+", str(num2) + 
-            "\n\033[96m\033[1mSum: \033[0m" + str(sum))
-        Calculator.retry(self)
         return
 
     # def subtract
