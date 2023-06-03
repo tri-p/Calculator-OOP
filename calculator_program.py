@@ -8,27 +8,22 @@ ui = UserInterface()
 calc = Calculator()
 
 # ==== start ====
-# ask operation
-user_input = ui.ask_operation()
-if user_input == "a":
-    calc.add(num1, num2) # should lead to add function
+while True:
+    # ask operation
+    user_input = ui.ask_operation()
+    if user_input == "a":
+        calc.add(num1, num2) # should lead to add function
 
-# ask to input two numbers
-num1 = ui.input_user()
-num2 = ui.input_user()
+    # ask to input two numbers
+    num1 = ui.input_user()
+    num2 = ui.input_user()
 
-# if the user enters "a"
-sum = calc.add(num1, num2)
-ui.print_sum(sum)
+    # if the user enters "a"
+    sum = calc.add(num1, num2)
+    ui.print_sum(sum)
 
-# if the user enters "s"
-calc.sub()
-
-# if the user enters "m"
-calc.mul()
-
-# if the user enters "d"
-calc.div()
-
-# prompts the user if they would like to try again
-calc.retry()
+    # retry
+    if not ui.retry():
+        print("\n\033[96m\x1B[3m\033[1mThank you!\033[0m")
+        print("\n" + "\033[93m=" * 80 + "\n")
+        break

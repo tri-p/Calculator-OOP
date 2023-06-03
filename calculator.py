@@ -6,7 +6,7 @@ class Calculator:
     # def add
     def add(self, num1, num2):
         sum = num1 + num2
-        return
+        return sum
 
     # def subtract
     def sub(self):
@@ -22,7 +22,6 @@ class Calculator:
         diff = num1 - num2
         print("\n\033[92m" + str(num1), "-", str(num2) + 
             "\n\033[96m\033[1mDifference: \033[0m" + str(diff))
-        Calculator.retry(self)
         return
 
     # def multiply
@@ -39,7 +38,6 @@ class Calculator:
         prod = num1 * num2
         print("\n\033[92m" + str(num1), "*", str(num2) + 
             "\n\033[96m\033[1mProduct: \033[0m" + str(prod))
-        Calculator.retry(self)
         return
 
     # def division
@@ -60,26 +58,4 @@ class Calculator:
             exit()
         print("\n\033[92m" + str(num1), "/", str(num2) + 
             "\n\033[96m\033[1mQuotient: \033[0m" + str(quot))
-        Calculator.retry(self)
-        return
-
-    # def retry
-    def retry(self):
-        '''Create def retry where it asks the user if they would
-        like to try again or not.''' 
-        user_input = input("\n\033[95m\x1B[3m\033[1mWould you like to try again?\033[0m\n" +
-                        "\033[92my \033[97m- Yes\n" +
-                        "\033[92mn \033[97m- No\n\n" +
-                        "\033[95m")
-        if user_input.lower() == "y":
-            Calculator.ask_operation(self)
-        elif user_input.lower() == "n":
-            print("\n\033[96m\x1B[3m\033[1mThank you!\033[0m")
-            print("\n" + "\033[93m=" * 80 + "\n")
-            exit()
-        else:
-            print("\n\033[91mError. Invalid input.\033[97m\n")
-            print("\033[93m=" * 80 + "\n")
-            exit()
-        Calculator.retry(self)
         return

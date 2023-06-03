@@ -32,3 +32,17 @@ class UserInterface:
     def print_sum(self, sum):
         print("\n\033[96m\033[1mSum: \033[0m" + str(sum))
         return
+    
+    # retry
+    def retry(self):
+        inp_try = input("\n\033[95m\x1B[3m\033[1mWould you like to try again?\033[0m\n" +
+                        "\033[92my \033[97m- Yes\n" +
+                        "\033[92mn \033[97m- No\n\n" +
+                        "\033[95m")
+        if inp_try.lower() == "y":
+            return True
+        elif inp_try.lower() == "n":
+            return False
+        else:
+            print("\n\033[91mError. Invalid input.\033[97m\n")
+            return self.retry()
