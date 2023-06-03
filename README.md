@@ -3,7 +3,7 @@ A simple calculator program created in Python that allows the user to input two 
 
 ### To run the program
 1. Open the file.
-2. Run the Python code 'calculator_call.py'.
+2. Run the Python code 'calculator_program.py'.
 3. It will ask the user to choose an operation.
 4. It will then prompt the user to input two numbers.
 5. It will evaluate the input and display the result.
