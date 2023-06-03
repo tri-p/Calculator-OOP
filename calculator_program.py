@@ -16,10 +16,8 @@ while True:
     if user_input == "a":
         op.add_ans() # should lead to add function
     elif user_input == "s":
-         # should lead to sub function
-    elif user_input == "m": 
+        op.sub_ans() # should lead to sub function
          # should lead to mul function
-    elif user_input == "d":
          # should lead to div function
     else:
         print("\n\033[91mError. Invalid input.\033[97m\n")

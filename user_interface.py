@@ -30,22 +30,22 @@ class UserInterface:
 
     # print sum
     def print_sum(self, sum):
-        print("\n\033[96m\033[1mSum: \033[0m" + str(sum))
+        print("\033[92m\033[1mSum: \033[0m" + str(sum))
         return
     
     # print diff
     def print_diff(self, diff):
-        print("\n\033[96m\033[1mDifference: \033[0m" + str(diff))
+        print("\033[92m\033[1mDifference: \033[0m" + str(diff))
         return
     
     # print prod
     def print_prod(self, prod):
-        print("\n\033[96m\033[1mProduct: \033[0m" + str(prod))
+        print("\033[92m\033[1mProduct: \033[0m" + str(prod))
         return
     
     # print quot
     def print_quot(self, quot):
-        print("\n\033[96m\033[1mQuotient: \033[0m" + str(quot))
+        print("\033[92m\033[1mQuotient: \033[0m" + str(quot))
         return
     
     # retry
