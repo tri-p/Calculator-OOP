@@ -28,6 +28,10 @@ while True:
     diff = calc.sub(num1, num2)
     ui.print_diff(diff)
 
+    # if the user enters "m" - multiply
+    prod = calc.mul(num1, num2)
+    ui.print_prod(prod)
+
     # retry
     if not ui.retry():
         print("\n\033[96m\x1B[3m\033[1mThank you!\033[0m")
