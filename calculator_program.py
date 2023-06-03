@@ -1,13 +1,17 @@
 # PABUNA, KATRINA B. 
 
 # import class
+from user_interface import UserInterface
 from calculator import Calculator
 
+ui = UserInterface()
 calc = Calculator()
 
 # ==== start ====
 # ask operation
-calc.ask_operation()
+user_input = ui.ask_operation()
+if user_input == "a":
+    calc.add() # should lead to add function
 
 # if the user enters "a"
 calc.add()
@@ -21,5 +25,5 @@ calc.mul()
 # if the user enters "d"
 calc.div()
 
-# propts the user if they would like to try again
+# prompts the user if they would like to try again
 calc.retry()
