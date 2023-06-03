@@ -15,7 +15,7 @@ class UserInterface:
                             "\033[92md \033[97m- Divide\n\n" +
                             "\033[95m")
         user_input = user_input.lower()
-        print("\n")
+        print("")
         return user_input
 
     # ask for inputs
@@ -25,7 +25,7 @@ class UserInterface:
             number = float(number)
             return number
         except ValueError:
-            print("Input a number only.")
+            print("\033[91mInput a number only.\033[97m\n")
             return self.input_user()
 
     # print sum
