@@ -45,7 +45,7 @@ class UserInterface:
     
     # print quot
     def print_quot(self, quot):
-        print("\n\033[96m\033[1mQuotient: \033[0m" + str(prod))
+        print("\n\033[96m\033[1mQuotient: \033[0m" + str(quot))
         return
     
     # retry

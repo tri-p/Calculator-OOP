@@ -3,22 +3,24 @@
 # import class
 from user_interface import UserInterface
 from calculator import Calculator
+from calc_operations import CalculatorOperations
 
 ui = UserInterface()
 calc = Calculator()
+op = CalculatorOperations()
 
 # ==== start ====
 while True:
     # ask operation
     user_input = ui.ask_operation()
     if user_input == "a":
-        calc.add(num1, num2) # should lead to add function
+        add_ans # should lead to add function
     elif user_input == "s":
-        calc.sub(num1, num2) # should lead to sub function
+        calc.sub() # should lead to sub function
     elif user_input == "m": 
-        calc.mul(num1, num2) # should lead to mul function
+        calc.mul() # should lead to mul function
     elif user_input == "d":
-        calc.div(num1, num2) # should lead to div function
+        calc.div() # should lead to div function
     else:
         print("\n\033[91mError. Invalid input.\033[97m\n")
         exit()
@@ -28,8 +30,9 @@ while True:
     num2 = ui.input_user()
 
     # if the user enters "a" - add
-    sum = calc.add(num1, num2)
-    ui.print_sum(sum)
+    def add_ans(self):
+        sum = calc.add(num1, num2)
+        ui.print_sum(sum)
 
     # if the user enters "s" - subtract
     diff = calc.sub(num1, num2)
